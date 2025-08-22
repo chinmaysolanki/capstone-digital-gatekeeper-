@@ -1,0 +1,27 @@
+# Core ML/Computer Vision
+ultralytics>=8.0.0
+opencv-python>=4.8.0
+numpy>=1.24.0
+pillow>=10.0.0
+# PyTorch (CPU wheels on macOS)
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Data & Config
+pyyaml>=6.0
+
+# Web/API & Utils
+requests>=2.31.0
+fastapi>=0.104.0
+uvicorn>=0.24.0
+
+# Dashboard
+streamlit>=1.28.0
+
+# Audio monitoring (sharp-cutter detection)
+sounddevice>=0.4.6
+
+# Optional dev
+pytest>=7.4.0
+flake8>=6.0.0
+mypy>=1.5.0

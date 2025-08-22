@@ -1,27 +1,31 @@
-# Core ML/Computer Vision
+# Core ML and Computer Vision
 ultralytics>=8.0.0
 opencv-python>=4.8.0
 numpy>=1.24.0
-pillow>=10.0.0
-# PyTorch (CPU wheels on macOS)
-torch>=2.0.0
-torchvision>=0.15.0
+Pillow>=9.5.0
 
-# Data & Config
-pyyaml>=6.0
+# Audio Processing
+sounddevice>=0.4.6
+librosa>=0.10.0
 
-# Web/API & Utils
+# Web Framework and API
+fastapi>=0.100.0
+uvicorn[standard]>=0.23.0
+python-multipart>=0.0.6
 requests>=2.31.0
-fastapi>=0.104.0
-uvicorn>=0.24.0
 
 # Dashboard
 streamlit>=1.28.0
 
-# Audio monitoring (sharp-cutter detection)
-sounddevice>=0.4.6
+# Database and Data Handling
+sqlite3  # Built-in with Python
+pandas>=2.0.0
 
-# Optional dev
-pytest>=7.4.0
-flake8>=6.0.0
-mypy>=1.5.0
+# Utilities
+python-dotenv>=1.0.0
+pathlib  # Built-in with Python 3.4+
+typing  # Built-in with Python 3.5+
+
+# Optional: GPU acceleration
+# torch>=2.0.0  # Uncomment for PyTorch GPU support
+# torchvision>=0.15.0  # Uncomment for PyTorch GPU support

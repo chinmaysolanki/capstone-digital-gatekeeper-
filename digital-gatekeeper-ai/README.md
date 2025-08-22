@@ -39,6 +39,36 @@ python3 pi_integration/run_atm_guard.py --imgsz 480 --device cpu
 # python3 pi_integration/run_atm_guard.py --imgsz 480 --device mps --audio-monitor
 ```
 
+## 🚀 **Easy Runner Scripts**
+
+For quick access, use these simple runner scripts:
+
+### **Detection Model Runner**
+```bash
+python3 run_detection.py
+```
+- ✅ Automatically checks API server status
+- ✅ Enables audio monitoring
+- ✅ Opens camera for real-time detection
+- ✅ Detects weapons, tools, face coverings, crowding
+
+### **Dashboard Runner**
+```bash
+python3 run_dashboard.py
+```
+- ✅ Opens web dashboard in browser
+- ✅ Real-time security event monitoring
+- ✅ Enhanced CRITICAL threat styling
+- ✅ Event snapshots and analysis
+
+### **API Server Runner**
+```bash
+python3 run_api_server.py
+```
+- ✅ Starts FastAPI alert server
+- ✅ Handles security events and snapshots
+- ✅ SQLite database storage
+
 Check recent events:
 ```bash
 curl -s http://localhost:8088/events | sed -E 's/},{/},\n{/g' | head -20

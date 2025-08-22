@@ -130,12 +130,13 @@ def grade_threat(face_preds, obj_preds, threat_keywords=None, audio_active=False
     reasons = []
     level = "LOW"
 
+    # Primary escalation rules
     if has_weapon:
         level, reasons = "CRITICAL", ["weapon/tool detected: " + ", ".join(sorted(set(matched_threats)))[:120]]
+    elif face_cov:
+        level, reasons = "CRITICAL", ["face covered", "identity concealment", "critical security threat"]
     elif face_cov and has_rod:
         level, reasons = "CRITICAL", ["face covered + weapon", "security breach"]
-    elif face_cov:
-        level, reasons = "HIGH", ["face covered", "identity concealment", "potential threat"]
     elif has_rod:
         level, reasons = "MEDIUM", ["rod detected"]
 
